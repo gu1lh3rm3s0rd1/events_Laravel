@@ -10,10 +10,24 @@ class Event extends Model
     use HasFactory;
 
     protected $casts = [
-        'items' => 'array'
+        'items' => 'array',
     ];
 
     protected $dates = [
-        'date'
+        'date',
     ];
+
+    protected $fillable = [
+        'title', 'date', 'city', 'private', 'description', 'items', 'image', 'user_id',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function participants()
+    {
+        return $this->belongsToMany(User::class, 'event_user', 'event_id', 'user_id');
+    }
 }

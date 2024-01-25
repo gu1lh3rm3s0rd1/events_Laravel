@@ -41,6 +41,15 @@ header {
     padding: 10px;
 }
 
+#info-container .already-joined-msg {
+    margin: 15px 0;
+    color: rgb(15, 15, 124);
+    background-color: #ccc;
+    border: 1px solid #d4edda;
+    padding: 10px;
+    width: 275px;
+}
+
 
 /* navbar */
 #navbar img {
@@ -179,6 +188,8 @@ footer p {
 
 #image-container img {
     border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
 
 #info-container h1 {
@@ -215,4 +226,23 @@ footer p {
 
 #items-list li {
     display: flex;
+}
+
+#description-container {
+    margin-top: 30px;
+}
+
+
+/* dashboard */
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container th {
+    width: 25%;
+}
+
+.dashboard-events-container form {
+    display: inline-block;
 }
